@@ -1,0 +1,35 @@
+{
+  "isDebugging": false,
+  "framework": "diginext",
+  "git": {
+    "creator": "nguyenan",
+    "repoURL": "https://bitbucket.org/digitopvn/nuvi-doiqua-2022/src"
+  },
+  "env": "dev",
+  "shoudInherit": false,
+  "namespace": {
+    "dev": "nuvi-doiqua-2022-ns",
+    "prod": "nuvi-doiqua-2022-ns"
+  },
+  "ssl": true,
+  "username": "nguyenan",
+  "code": "fVE9LR4QGat78yE9rx",
+  "refreshToken": "s9NX7jssPd4Sfykt3P",
+  "projectSlug": "nuvi-doiqua-2022",
+  "remoteURL": "",
+  "projectName": "Nuvi DoiQua 2022",
+  "diginext-cli": "1.0.2",
+  "domain": {
+    "staging": [],
+    "prod": []
+  },
+  "cdn": {
+    "dev": false,
+    "staging": false,
+    "prod": false
+  },
+  "pipeline": {
+    "prod": true
+  },
+  "version": "1.4.3"
+}
