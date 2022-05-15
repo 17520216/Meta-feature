@@ -1,0 +1,200 @@
+.heading {
+  @include text($font-pn-eb, $tcl-heading, var(--fs-h2), null, null, 124.19%);
+}
+
+.des {
+  @include text($font-pn-l, $tcl-des, var(--fs-p), null, inherit, 163.12%);
+  opacity: 0.6;
+}
+.copy {
+  @include text($font-pn-b, #757575, 1.2rem, null, inherit, 18px);
+}
+
+.btn {
+  padding: 10px 90px;
+  background: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+  border-radius: 40px;
+  cursor: pointer;
+  width: max-content;
+  @include transition($t);
+  a {
+    @include text($font-pn-eb, #161616, 1.6rem, 400, capitalize, 30px);
+  }
+  &:hover {
+    a {
+      color: #fff;
+    }
+    background: #000;
+  }
+}
+
+.btn-more {
+  letter-spacing: 3px;
+  @include text($font-pn-l, #f0f0f0, 1.2rem, 400, uppercase, 18px);
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  cursor: pointer;
+  @include transition($t);
+
+  span {
+    margin-right: 8px;
+  }
+  img {
+    width: 14px;
+    height: auto;
+    @include transition($t);
+  }
+  &:hover {
+    opacity: 1;
+    img {
+      transform: translateX(10px);
+    }
+  }
+}
+
+.btn-around {
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  @include text($font-pn-l, #ffffff, 1.2rem, 400, uppercase, 18px);
+  cursor: pointer;
+  span {
+    opacity: 0.6;
+    @include transition($t);
+  }
+  .round {
+    opacity: 0.6;
+    margin-left: 16px;
+    width: 49px;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #4f4f4f;
+    @include transition($t);
+    img {
+      width: 15px;
+    }
+  }
+  @include transition($t);
+
+  &:hover {
+    span {
+      opacity: 1;
+      display: block;
+    }
+    .round {
+      opacity: 1;
+      border: 1px solid #ffffff;
+    }
+  }
+  &.--reverse {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    .round {
+      margin-left: 0px;
+      margin-right: 16px;
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.title-section {
+  letter-spacing: 0.16em;
+  @include text($font-pn-bt, #f0f0f0, 3rem, bold, uppercase, 3.6rem);
+}
+
+.block-arrows,
+.block-arrowsMb {
+  display: flex;
+  .btn-around {
+    &.--prev {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.txtbox {
+  &__title {
+    position: relative;
+    @include text($font-pn-b, $tcl-heading, var(--fs-h2), null, uppercase);
+    letter-spacing: calcTextSpacing(70, 40px);
+    line-height: normal;
+    margin-bottom: 10px;
+    &.--left,
+    &.--right {
+      &::before {
+        content: "";
+        @include positionCenter("top");
+        @include size(100%, 2px);
+        background-color: $color-black;
+      }
+    }
+    &.--center {
+      padding-bottom: 10px;
+      &::before {
+        content: "";
+        @include positionCenter("left");
+        bottom: 0;
+        @include size(38px, 3px);
+        background-color: $color-primary;
+      }
+    }
+    &.--left {
+      &::before {
+        right: calc(100% + 20px);
+      }
+    }
+
+    &.--right {
+      &::before {
+        left: calc(100% + 20px);
+      }
+    }
+  }
+  &__desc {
+    @include overtext(3);
+    margin-bottom: 20px;
+  }
+  @include xxs {
+    &__title {
+      font-size: 28px;
+    }
+  }
+
+  @include maxW(375px) {
+    &__title {
+      font-size: 26px;
+    }
+  }
+}
+@include sm {
+  .btn {
+    padding: 10px 69px;
+  }
+}
+@include xs {
+  .title {
+    font-size: 2rem;
+  }
+  .btn-around {
+    .round {
+      width: 38px;
+      height: 38px;
+      margin-left: 10px;
+      img {
+        width: 14px;
+      }
+    }
+  }
+}

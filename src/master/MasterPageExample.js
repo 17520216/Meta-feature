@@ -63,7 +63,7 @@ function MasterPageExample({
       {/* TRACKING SCRIPTS - CHANGE THE ID TO THE CORRECT ONE*/}
       {/* <GtagScript id="G-EE9VED6EC3" /> */}
 
-      <main>
+      <main className="main">
         <Header />
         {children}
         <Footer />

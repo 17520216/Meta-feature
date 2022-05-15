@@ -1,0 +1,367 @@
+/* <-------  Style Element  -------> */
+
+.title-main {
+  @include text("Montserrat", #ffffff, 44px, 800, uppercase, 54px);
+}
+.title {
+  @include text("Poppins", #ffffff, 30px, 700, uppercase, 45px);
+  transition: all 0.3s ease;
+  &:hover {
+    color: #bc078c;
+  }
+  font-family: $font-pn-eb;
+}
+.text {
+  @include text("Poppins", #ffffff, 20px, 400, none, 31px);
+  font-family: $font-pn-eb;
+}
+.btn-main {
+  @include text("Montserrat", #ffffff, 24px, 700, uppercase, 37px);
+  background: linear-gradient(91.49deg, #0e76c1 -2.4%, #6b51d2 96.62%);
+  border-radius: 17px;
+  padding: 20px 50px;
+  width: max-content;
+  cursor: pointer;
+}
+
+section {
+  padding: 60px 0;
+}
+/* <-------  Main Style  -------> */
+.main {
+  background-image: url(../../public/images/home/main-bg.jpg);
+  background-size: 100% auto;
+}
+
+.banner {
+  min-height: 100vh;
+  /* fix issues bug viewport IOS */
+  min-height: -webkit-fill-available;
+  height: 100vh;
+  .wrap {
+    padding-top: 280px;
+    .text {
+      max-width: 550px;
+      margin: 38px 0;
+    }
+  }
+}
+
+/* <-------  style slider meta being  -------> */
+.section-slider {
+  padding: 40px 0;
+  /* <-------  Custom dots slider  -------> */
+  .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding-top: 57px;
+    li {
+      margin: 0 6px;
+      width: 53.92px;
+      height: 3.36px;
+      background: #ffffff;
+      opacity: 0.6;
+      button {
+        // display: none;
+        width: 53.92px;
+        height: 3.36px;
+        background: #ffffff;
+        border: none;
+        opacity: 0;
+      }
+    }
+    .slick-active {
+      opacity: 1;
+    }
+  }
+}
+.slider-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .des {
+    padding: 36px 0;
+  }
+  .top {
+    width: 496.75px;
+    height: 82.37px;
+    background-image: url(../../public/images/home/bg-title.png);
+    background-size: 100% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* <-------  Style Meta Future  -------> */
+.meta-future {
+  .title {
+    text-align: center;
+  }
+  .wrap {
+    background-image: url(../../public/images/home/bg-future.png);
+    background-size: 100% 100%;
+  }
+  .block-layer {
+    padding: 10px 47px;
+    width: max-content;
+    background: linear-gradient(90deg, #a4117d -22.62%, #5e14b9 130.16%);
+    border-radius: 15.7346px;
+    text-align: center;
+    margin: 40px auto;
+    .name {
+      @include text("Poppins", #ffffff, 29.618px, 700, none, 43px);
+      text-align: center;
+    }
+    .content {
+      text-align: center;
+      @include text("Poppins", #ffffff, 20.3624px, 400, uppercase, 29px);
+    }
+  }
+  .block-child {
+    margin-bottom: 152px;
+  }
+  .child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .item {
+      padding: 11px 35px;
+      background-image: url(../../public/images/home/bg-btn.png);
+      @include text("Poppins", #ffffff, 23.1391px, 600, uppercase, 33px);
+      background-size: 100% 100%;
+      margin: 12px 14px;
+    }
+  }
+}
+
+/* <-------  Style metatoken  -------> */
+.meta-token {
+  .title {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  .wrap {
+    margin-top: 120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+
+    .coin {
+      position: relative;
+      z-index: 2;
+    }
+    .sub {
+      padding: 35px 42px;
+      position: absolute;
+      width: 450px;
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0px 7.52013px 15.0403px rgba(27, 27, 27, 0.16);
+      backdrop-filter: blur(75.2013px);
+      /* Note: backdrop-filter has minimal browser support */
+      border-radius: 15.0403px;
+      h3 {
+        @include text("Montserrat", #ffffff, 23.5004px, 700, none, 29px);
+        margin-bottom: 4px;
+      }
+      .text {
+        @include text("Poppins", #ffffff, 16px, 400, none, 31px);
+        font-family: $font-pn-eb;
+      }
+      &.--item1 {
+        text-align: right;
+        top: -22%;
+        left: 5%;
+      }
+      &.--item2 {
+        text-align: left;
+        top: -22%;
+        right: 5%;
+      }
+      &.--item3 {
+        text-align: right;
+        bottom: -1%;
+        left: 2%;
+      }
+      &.--item4 {
+        text-align: left;
+        bottom: 3%;
+        right: 2%;
+      }
+    }
+  }
+}
+
+/* <-------  Style Tokenomics  -------> */
+
+.tokenomics {
+  .title {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    .item {
+      width: 46%;
+      p {
+        @include text("Poppins", #ffffff, 26px, 600, none, 39px);
+        font-family: $font-pn-eb;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* <-------  Style Road mAp  -------> */
+.road-map {
+  .title {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  .wrap {
+    display: flex;
+    .map-stroke {
+      width: 100%;
+      position: absolute;
+      top: 0%;
+      z-index: 0;
+      img {
+        max-width: 100%;
+      }
+    }
+    .item-map {
+      width: 25%;
+      position: relative;
+      z-index: 3;
+      .img {
+        img {
+          margin: auto;
+          max-width: 300px;
+        }
+      }
+      &.map2,
+      &.map4 {
+        margin-top: 130px;
+      }
+      .description {
+        @include text("Montserrat", #ffffff, 18px, 400, none, 30px);
+        margin: auto;
+        max-width: 200px;
+        // font-family: "Poppins";
+      }
+    }
+  }
+}
+
+/* <-------  Style partner  -------> */
+.partner {
+  .title {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  .slider-partner {
+    .item {
+      height: 160px;
+      width: auto;
+      img {
+        height: 100%;
+        width: auto;
+        margin: auto;
+      }
+      &.item8 {
+        margin: auto;
+        display: flex !important;
+        align-items: center;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+      &.item2 {
+        margin: auto;
+        display: flex !important;
+        align-items: center;
+        img {
+          height: 60%;
+        }
+      }
+    }
+  }
+}
+
+.core-team {
+  .title {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  .wrap {
+    margin-left: 40px;
+  }
+}
+.card-item {
+  max-width: 288.37px;
+  height: 560px;
+  position: relative;
+  z-index: 2;
+  padding: 20px 20px;
+  box-shadow: 5.94583px 2.97292px 6.68906px -1.48646px rgba(0, 0, 0, 0.25);
+  background: #230e57;
+  border-radius: 20.8104px;
+  &:before {
+    content: "";
+    width: calc(100% + 5px);
+    height: calc(100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../../public/images/home/bg-card.png);
+    background-size: 100% 100%;
+  }
+  .card-name {
+    @include text("Montserrat", #9b1177, 23.7833px, 700, uppercase, 29px);
+    text-align: center;
+    padding: 6px 0;
+  }
+  .card-title {
+    @include text("Montserrat", #ffffff, 17.8375px, 400, uppercase, 27px);
+    // font-family: 'Poppins';
+    text-align: center;
+    padding: 4px 0;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  img {
+    width: 100%;
+  }
+}
+.advisor {
+  .title {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card-item {
+      max-width: 340.37px;
+      margin: 0 20px;
+    }
+  }
+}

@@ -1,3 +1,38 @@
-.test {
-  color: red;
+@import "core/reset";
+@import "core/variables";
+@import "core/mixins";
+@import "core/libs";
+@import "core/loading";
+@import "core/layout";
+@import "core/nav";
+@import "core/main";
+@import "core/components";
+@import "core/header";
+@import "core/footer";
+
+/* <-------  Mixin  -------> */
+@mixin text(
+  $font-family: null,
+  $color: null,
+  $font-size: null,
+  $font-weight: null,
+  $text-tranform: null,
+  $line-height: null
+) {
+  @if $font-family {
+    font-family: $font-family;
+  }
+  font-size: $font-size;
+  @if $font-weight {
+    font-weight: $font-weight;
+  }
+  @if $text-tranform {
+    text-transform: $text-tranform;
+  }
+  @if $line-height {
+    line-height: $line-height;
+  }
+  @if $color {
+    color: $color;
+  }
 }

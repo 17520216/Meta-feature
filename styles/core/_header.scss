@@ -1,0 +1,102 @@
+.header {
+  @include position(fixed, 0, 0, null, 0);
+  width: 100%;
+  height: var(--height-header);
+  padding: 80px;
+  z-index: 600;
+  @include transition($t);
+  &.--fixed {
+    background-color: #230053;
+    --height-header: 40px;
+    padding: 40px;
+    @include transition($t);
+  }
+
+  .container-fluid {
+    height: 100%;
+    @include flex(null, space-between, center);
+  }
+
+  &__menu {
+    @include flex(null, center, center);
+    @include positionCenter("left");
+    &-item {
+      margin: 0 40px;
+      a {
+        position: relative;
+        padding-bottom: 2px;
+        @include text($font-pn-b, $tcl-white, 18px, normal, none);
+        @include transition($t);
+        will-change: transition;
+        white-space: pre;
+        text-decoration: none;
+        &.active,
+        &:hover {
+          @include transition($t);
+        }
+        &::before {
+          content: "";
+          @include position(absolute, null, 0, 0, auto);
+          @include size(0, 2px);
+          background-color: $tcl-white;
+          @include transition($t $cubic);
+        }
+        &:hover::before,
+        &.active::before {
+          left: 0;
+          right: auto;
+          @include size(100%, 2px);
+          @include transition($t $cubic);
+        }
+      }
+      .logo {
+        img {
+          width: 114px;
+          max-width: unset;
+          @include transition($t $cubic);
+        }
+        &.--fixed {
+          img {
+            width: 70px;
+          }
+        }
+        &::before {
+          display: none;
+        }
+        &:hover::before,
+        &.active::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include maxW(1090px) {
+  .header {
+    &__menu {
+      left: 55%;
+    }
+  }
+}
+
+@include md {
+  .header {
+    --height-header: 60px;
+    &__menu {
+      display: none;
+    }
+    &__right {
+      .hamburger {
+        display: flex;
+      }
+    }
+  }
+}
+@include sm {
+  .header {
+    &.--fixed {
+      --height-header: 60px;
+    }
+  }
+}
