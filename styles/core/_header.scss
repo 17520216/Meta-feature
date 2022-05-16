@@ -25,7 +25,7 @@
       a {
         position: relative;
         padding-bottom: 2px;
-        @include text($font-pn-b, $tcl-white, 18px, normal, none);
+        @include text("MontserratMedium", #fff, 18px, normal, 22px);
         @include transition($t);
         will-change: transition;
         white-space: pre;

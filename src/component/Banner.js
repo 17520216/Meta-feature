@@ -1,7 +1,9 @@
-import React from 'react'
+import asset from '@/plugins/assets/asset'
+import React, { useRef } from 'react'
 import Container from 'src/component/Container'
 
 const Banner = () => {
+    const proRef = useRef();
     return (
         <section className="banner">
             <Container>
@@ -15,10 +17,11 @@ const Banner = () => {
                             </span>
                         </div>
                     </div>
+
                 </div>
             </Container>
-            <div className="img-banner">
-
+            <div className="img-banner" ref={proRef}>
+                <img src={asset("/images/home/main-banner.png")} alt="" />
             </div>
         </section>
     )

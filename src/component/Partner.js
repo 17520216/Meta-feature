@@ -12,6 +12,19 @@ const Partner = props => {
 
     const checkMobile = () => {
         let w = window.innerWidth;
+        if (w > 1440) {
+            setIsMobile(false);
+            setSettings({
+                dots: false,
+                infinite: true,
+                speed: 1500,
+                slidesToShow: 7,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                arrows: false,
+            });
+            return;
+        }
         if (w > 1024) {
             setIsMobile(false);
             setSettings({

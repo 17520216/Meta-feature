@@ -1,27 +1,39 @@
 /* <-------  Style Element  -------> */
 
 .title-main {
-  @include text("Montserrat", #ffffff, 44px, 800, uppercase, 54px);
+  @include text("MontserratExtraBold", #ffffff, 44px, 800, uppercase, 54px);
 }
 .title {
-  @include text("Poppins", #ffffff, 30px, 700, uppercase, 45px);
+  @include text("PoppinsBold", #ffffff, 30px, 700, uppercase, 45px);
   transition: all 0.3s ease;
   &:hover {
     color: #bc078c;
   }
-  font-family: $font-pn-eb;
 }
 .text {
-  @include text("Poppins", #ffffff, 20px, 400, none, 31px);
-  font-family: $font-pn-eb;
+  @include text("PoppinsRegular", #ffffff, 20px, 400, none, 31px);
 }
 .btn-main {
-  @include text("Montserrat", #ffffff, 24px, 700, uppercase, 37px);
+  @include text("MontserratBold", #ffffff, 24px, 700, uppercase, 37px);
   background: linear-gradient(91.49deg, #0e76c1 -2.4%, #6b51d2 96.62%);
   border-radius: 17px;
   padding: 20px 50px;
   width: max-content;
   cursor: pointer;
+}
+// keyframes
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 section {
@@ -37,12 +49,28 @@ section {
   min-height: 100vh;
   /* fix issues bug viewport IOS */
   min-height: -webkit-fill-available;
+  position: relative;
   height: 100vh;
+  background-image: url(../../public/images/home/bg-banner.jpg);
+  background-size: cover;
   .wrap {
     padding-top: 280px;
+    @media (max-width: 1440px) {
+      padding-top: 200px;
+    }
     .text {
       max-width: 550px;
       margin: 38px 0;
+    }
+  }
+  .img-banner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    animation: floating 4s linear 0.3s infinite;
+    img {
+      width: 100%;
     }
   }
 }
@@ -112,12 +140,12 @@ section {
     text-align: center;
     margin: 40px auto;
     .name {
-      @include text("Poppins", #ffffff, 29.618px, 700, none, 43px);
+      @include text("PoppinsBold", #ffffff, 29.618px, 700, none, 43px);
       text-align: center;
     }
     .content {
       text-align: center;
-      @include text("Poppins", #ffffff, 20.3624px, 400, uppercase, 29px);
+      @include text("PoppinsLight", #ffffff, 20.3624px, 400, uppercase, 29px);
     }
   }
   .block-child {
@@ -130,7 +158,14 @@ section {
     .item {
       padding: 11px 35px;
       background-image: url(../../public/images/home/bg-btn.png);
-      @include text("Poppins", #ffffff, 23.1391px, 600, uppercase, 33px);
+      @include text(
+        "PoppinsSemiBold",
+        #ffffff,
+        23.1391px,
+        600,
+        uppercase,
+        33px
+      );
       background-size: 100% 100%;
       margin: 12px 14px;
     }
@@ -165,12 +200,11 @@ section {
       /* Note: backdrop-filter has minimal browser support */
       border-radius: 15.0403px;
       h3 {
-        @include text("Montserrat", #ffffff, 23.5004px, 700, none, 29px);
+        @include text("MontserratBold", #ffffff, 23.5004px, 700, none, 29px);
         margin-bottom: 4px;
       }
       .text {
-        @include text("Poppins", #ffffff, 16px, 400, none, 31px);
-        font-family: $font-pn-eb;
+        @include text("PoppinsLight", #ffffff, 16px, 400, none, 24px);
       }
       &.--item1 {
         text-align: right;
@@ -210,8 +244,7 @@ section {
     .item {
       width: 46%;
       p {
-        @include text("Poppins", #ffffff, 26px, 600, none, 39px);
-        font-family: $font-pn-eb;
+        @include text("PoppinsMedium", #ffffff, 26px, 600, none, 39px);
         text-align: center;
         margin-bottom: 30px;
       }
@@ -256,7 +289,7 @@ section {
         margin-top: 130px;
       }
       .description {
-        @include text("Montserrat", #ffffff, 18px, 400, none, 30px);
+        @include text("PoppinsLight", #ffffff, 18px, 400, none, 30px);
         margin: auto;
         max-width: 200px;
         // font-family: "Poppins";
@@ -312,7 +345,7 @@ section {
 }
 .card-item {
   max-width: 288.37px;
-  height: 560px;
+  height: 520px;
   position: relative;
   z-index: 2;
   padding: 20px 20px;
@@ -332,19 +365,19 @@ section {
     background-size: 100% 100%;
   }
   .card-name {
-    @include text("Montserrat", #9b1177, 23.7833px, 700, uppercase, 29px);
+    @include text("MontserratBold", #9b1177, 23.7833px, 700, uppercase, 29px);
     text-align: center;
-    padding: 6px 0;
+    padding: 10px 0 6px 0;
   }
   .card-title {
-    @include text("Montserrat", #ffffff, 17.8375px, 400, uppercase, 27px);
-    // font-family: 'Poppins';
+    @include text("PoppinsSemiBold", #ffffff, 17.8375px, 400, uppercase, 27px);
     text-align: center;
     padding: 4px 0;
   }
   .text {
-    font-size: 16px;
-    line-height: 24px;
+    text-align: center;
+    font-size: 12.6349px;
+    line-height: 19px;
   }
   img {
     width: 100%;
@@ -362,6 +395,64 @@ section {
     .card-item {
       max-width: 340.37px;
       margin: 0 20px;
+    }
+  }
+}
+
+/* <-------  StyleComing Soon  -------> */
+.section-banner {
+  min-height: 100vh;
+  /* fix issues bug viewport IOS */
+  min-height: -webkit-fill-available;
+  position: relative;
+  height: 100vh;
+  .content-coming {
+    padding-top: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    .left {
+      width: 50%;
+      margin-bottom: 70px;
+      h2 {
+        // @include text("Montserrat", #ffffff, 98px, 800, uppercase, 119px);
+        @include text(
+          "MontserratExtraBold",
+          #ffffff,
+          70px,
+          800,
+          uppercase,
+          119px
+        );
+        background: linear-gradient(180deg, #cf129b 0%, #4f7fcc 159.32%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-bottom: 26px;
+      }
+      h4 {
+        @include text(
+          "MontserratExtraBold",
+          #ffffff,
+          36px,
+          800,
+          uppercase,
+          44px
+        );
+        margin-bottom: 18px;
+      }
+      .banner-text {
+        @include text("PoppinsLight", #dadada, 20px, 400, none, 168%);
+      }
+    }
+    .right {
+      width: 50%;
+      img {
+        width: 100%;
+      }
     }
   }
 }

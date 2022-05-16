@@ -57,6 +57,18 @@ const CoreTeam = props => {
 
   const checkMobile = () => {
     let w = window.innerWidth;
+    if (w <= 1440) {
+      setSettings({
+        dots: false,
+        infinite: true,
+        speed: 1500,
+        slidesToShow: 4,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+      });
+      return;
+    }
     if (w > 1024) {
       setIsMobile(false);
       setSettings({
@@ -64,17 +76,6 @@ const CoreTeam = props => {
         infinite: true,
         speed: 1500,
         slidesToShow: 5,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        arrows: false,
-      });
-    }
-    if (w <= 1440) {
-      setSettings({
-        dots: false,
-        infinite: true,
-        speed: 1500,
-        slidesToShow: 4,
         autoplay: true,
         autoplaySpeed: 1000,
         arrows: false,
