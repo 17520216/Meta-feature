@@ -11,6 +11,8 @@ const Header = props => {
     const [fixed, setFixed] = useState(false);
     const { scrollX, scrollY, scrollDirection } = useScroll();
 
+    const [init, setInit] = useState(false);
+
     useEffect(() => {
         if (scrollY && scrollY >= 100) {
             setFixed(true);
@@ -19,28 +21,78 @@ const Header = props => {
         }
     }, [scrollY, scrollDirection]);
 
+    useEffect(() => {
+        setInit(true);
+    }, [])
+
+    if (!init) return null;
+
     return (
         <header className={`header ${fixed ? "--fixed" : ""}`}>
             <div class="container-fluid">
                 <ul className="header__menu">
                     <li className="header__menu-item">
-                        <a className="active" href="#banner">Home</a>
+                        <a className="active" href="/">Home</a>
                     </li>
 
                     <li className="header__menu-item">
-                        <a href="#">NFT Collection</a>
+                        <span>NFT Collection</span>
+                        <div className="sub-menu">
+                            <li className="sub">
+                                <a href="/nft-showroom">NTF Showroom</a>
+                            </li>
+                            <li className="sub">
+                                <a href="/exchangeable">Exchangeable NFTs</a>
+                            </li>
+                            <li className="sub">
+                                <a href="nft-storage">NFT Storage</a>
+                            </li>
+                        </div>
                     </li>
 
                     <li className="header__menu-item">
-                        <a href="#">Product</a>
+                        <span>Product</span>
+                        <div className="sub-menu">
+                            <li className="sub">
+                                <a href="Meta-vill">MetaVill</a>
+                            </li>
+                            <li className="sub">
+                                <a href="/meta-film">MetaFilm</a>
+                            </li>
+                            <li className="sub">
+                                <a href="meta-wallet">MetaWallet</a>
+                            </li>
+                            <li className="sub">
+                                <a href="meta-launpad">MetaLaunpad</a>
+                            </li>
+                            <li className="sub">
+                                <a href="meta-creation">MetaCreation</a>
+                            </li>
+                        </div>
                     </li>
                     <li className="header__menu-item"><a className={`logo ${fixed ? "--fixed" : ""}`} > <img src={asset("/images/home/logo.png")} alt="" /></a></li>
                     <li className="header__menu-item">
-                        <a href="#">Document</a>
+                        <span>Document</span>
+                        <div className="sub-menu">
+                            <li className="sub">
+                                <a href="#">Pitch deck</a>
+                            </li>
+                            <li className="sub">
+                                <a href="#">Proposal</a>
+                            </li>
+                        </div>
                     </li>
 
                     <li className="header__menu-item">
-                        <a href="#">Company</a>
+                        <span>Company</span>
+                        <div className="sub-menu">
+                            <li className="sub">
+                                <a href="#">Metavill</a>
+                            </li>
+                            <li className="sub">
+                                <a href="#">FAQ</a>
+                            </li>
+                        </div>
                     </li>
                     <li className="header__menu-item">
                         <a href="#">Contact</a>

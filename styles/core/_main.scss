@@ -437,7 +437,7 @@ section {
         @include text(
           "MontserratExtraBold",
           #ffffff,
-          36px,
+          28px,
           800,
           uppercase,
           44px
@@ -452,6 +452,39 @@ section {
       width: 50%;
       img {
         width: 100%;
+      }
+    }
+  }
+}
+
+/* <-------  Style exchangeable  -------> */
+.exchangeable {
+  min-height: 100vh;
+  /* fix issues bug viewport IOS */
+  min-height: -webkit-fill-available;
+  position: relative;
+  .content-exchangeable {
+    padding-top: 200px;
+    padding-bottom: 60px;
+    height: 100%;
+    .wrap {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .title {
+        margin: 30px auto;
+      }
+      .text {
+        display: block;
+        text-align: center;
+        margin: 40px 0;
+        color: #dadada;
+      }
+    }
+    .img-main {
+      img {
+        max-width: 100%;
       }
     }
   }
