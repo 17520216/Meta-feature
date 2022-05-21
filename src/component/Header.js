@@ -54,7 +54,7 @@ const Header = props => {
                         <span>Product</span>
                         <div className="sub-menu">
                             <li className="sub">
-                                <a href="Meta-vill">MetaVill</a>
+                                <a href="meta-vill">MetaVill</a>
                             </li>
                             <li className="sub">
                                 <a href="/meta-film">MetaFilm</a>

@@ -81,3 +81,72 @@ export const Twitter = () => (
   </svg>
 );
 export const TwitterIcon = (props) => <Icon component={Twitter} {...props} />;
+export const Play = () => (
+  <svg
+    width="156"
+    height="156"
+    viewBox="0 0 156 156"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="77.7938"
+      cy="78.2552"
+      r="77.3851"
+      fill="white"
+      fill-opacity="0.35"
+    />
+    <g filter="url(#filter0_bd_2020_286)">
+      <path
+        d="M125.04 79.0697C125.04 91.384 120.148 103.194 111.441 111.901C102.733 120.609 90.9231 125.501 78.6088 125.501C66.2945 125.501 54.4846 120.609 45.7771 111.901C37.0696 103.194 32.1777 91.384 32.1777 79.0697C32.1777 66.7555 37.0696 54.9455 45.7771 46.238C54.4846 37.5305 66.2945 32.6387 78.6088 32.6387C90.9231 32.6387 102.733 37.5305 111.441 46.238C120.148 54.9455 125.04 66.7555 125.04 79.0697ZM71.5861 62.1978C71.1522 61.8889 70.6416 61.7053 70.1103 61.6673C69.579 61.6292 69.0475 61.7381 68.5739 61.9821C68.1004 62.2261 67.7032 62.5956 67.4257 63.0503C67.1483 63.5051 67.0014 64.0274 67.001 64.56V93.5794C67.0014 94.1121 67.1483 94.6344 67.4257 95.0891C67.7032 95.5438 68.1004 95.9134 68.5739 96.1574C69.0475 96.4013 69.579 96.5102 70.1103 96.4722C70.6416 96.4341 71.1522 96.2506 71.5861 95.9416L91.8997 81.4319C92.2759 81.1635 92.5825 80.8091 92.7941 80.3982C93.0056 79.9873 93.116 79.5319 93.116 79.0697C93.116 78.6076 93.0056 78.1521 92.7941 77.7413C92.5825 77.3304 92.2759 76.976 91.8997 76.7076L71.5861 62.1978Z"
+        fill="white"
+        fill-opacity="0.4"
+        shape-rendering="crispEdges"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_bd_2020_286"
+        x="17.1777"
+        y="17.6387"
+        width="122.862"
+        height="122.862"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feGaussianBlur in="BackgroundImage" stdDeviation="7.5" />
+        <feComposite
+          in2="SourceAlpha"
+          operator="in"
+          result="effect1_backgroundBlur_2020_286"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="effect1_backgroundBlur_2020_286"
+          result="effect2_dropShadow_2020_286"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect2_dropShadow_2020_286"
+          result="shape"
+        />
+      </filter>
+    </defs>
+  </svg>
+);
+export const PlayIcon = (props) => <Icon component={Play} {...props} />;
