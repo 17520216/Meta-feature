@@ -14,6 +14,7 @@ const _dataSlider = [
         title: "CHARACTER AI CREATIVE",
         des: "Depending on your desired character, MFG will produce it into an NFT character accordingly, which can be served for different purposes. Once that NFT character is minted, you are granted your true ownership to use all kinds of features provided on the platform.",
         img: "/images/home/slider-being-2.png 2x",
+        isSmall: "item3"
     },
     {
         title: "NFT COLLECTION",
@@ -28,7 +29,7 @@ const SectionSlider = props => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 2000,
+        speed: 700,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,

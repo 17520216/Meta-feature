@@ -111,6 +111,7 @@ section {
   align-items: center;
   .des {
     padding: 36px 0;
+    text-align: center;
   }
   .top {
     width: 496.75px;
@@ -120,6 +121,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .images {
+    img {
+      max-width: 100%;
+    }
   }
 }
 
@@ -178,6 +184,43 @@ section {
     text-align: center;
     padding-bottom: 60px;
   }
+  .sub {
+    padding: 35px 42px;
+    position: absolute;
+    width: 450px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0px 7.52013px 15.0403px rgba(27, 27, 27, 0.16);
+    backdrop-filter: blur(75.2013px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 15.0403px;
+    h3 {
+      @include text("MontserratBold", #ffffff, 23.5004px, 700, none, 29px);
+      margin-bottom: 4px;
+    }
+    .text {
+      @include text("PoppinsLight", #ffffff, 16px, 400, none, 24px);
+    }
+    &.--item1 {
+      text-align: right;
+      top: -22%;
+      left: 5%;
+    }
+    &.--item2 {
+      text-align: left;
+      top: -22%;
+      right: 5%;
+    }
+    &.--item3 {
+      text-align: right;
+      bottom: -1%;
+      left: 2%;
+    }
+    &.--item4 {
+      text-align: left;
+      bottom: 3%;
+      right: 2%;
+    }
+  }
   .wrap {
     margin-top: 120px;
     position: relative;
@@ -189,43 +232,6 @@ section {
     .coin {
       position: relative;
       z-index: 2;
-    }
-    .sub {
-      padding: 35px 42px;
-      position: absolute;
-      width: 450px;
-      background: rgba(255, 255, 255, 0.08);
-      box-shadow: 0px 7.52013px 15.0403px rgba(27, 27, 27, 0.16);
-      backdrop-filter: blur(75.2013px);
-      /* Note: backdrop-filter has minimal browser support */
-      border-radius: 15.0403px;
-      h3 {
-        @include text("MontserratBold", #ffffff, 23.5004px, 700, none, 29px);
-        margin-bottom: 4px;
-      }
-      .text {
-        @include text("PoppinsLight", #ffffff, 16px, 400, none, 24px);
-      }
-      &.--item1 {
-        text-align: right;
-        top: -22%;
-        left: 5%;
-      }
-      &.--item2 {
-        text-align: left;
-        top: -22%;
-        right: 5%;
-      }
-      &.--item3 {
-        text-align: right;
-        bottom: -1%;
-        left: 2%;
-      }
-      &.--item4 {
-        text-align: left;
-        bottom: 3%;
-        right: 2%;
-      }
     }
   }
 }

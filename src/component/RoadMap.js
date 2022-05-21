@@ -2,15 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import asset from '@/plugins/assets/asset'
 import Container from 'src/component/Container'
+import useWindowDimensions from '@/plugins/utils/useWindowDimensions'
 
 const RoadMap = props => {
+    const { height, width } = useWindowDimensions();
+
     return (
         <section className="road-map">
             <Container>
                 <h2 className="title">Road Map</h2>
                 <div className="wrap">
                     <div className="map-stroke">
-                        <img src={asset("/images/home/stroke_road.png")} alt="" />
+                        {width > 1024 ? <img src={asset("/images/home/stroke_road.png")} alt="" /> : <img src={asset("/images/home/stroke_road2.png")} alt="" />}
                     </div>
                     <div className="item-map map1">
                         <div className="img">

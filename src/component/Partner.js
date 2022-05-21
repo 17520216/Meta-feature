@@ -53,7 +53,7 @@ const Partner = props => {
                 dots: false,
                 infinite: true,
                 speed: 1500,
-                slidesToShow: 2,
+                slidesToShow: 3,
                 autoplay: true,
                 autoplaySpeed: 1000,
                 arrows: false,

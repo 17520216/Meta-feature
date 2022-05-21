@@ -67,7 +67,6 @@ const CoreTeam = props => {
         autoplaySpeed: 1000,
         arrows: false,
       });
-      return;
     }
     if (w > 1024) {
       setIsMobile(false);
