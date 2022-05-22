@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Container from 'src/component/Container'
 import SliderItem from 'src/component/SliderItem'
 import Slider from "react-slick";
+import { useInView } from "react-intersection-observer";
+import { TweenMax, Elastic, TimelineLite, gsap } from "gsap";
+import SlideTop from 'src/component/SlideTop';
+
+
 
 const _dataSlider = [
     {
@@ -36,14 +41,44 @@ const SectionSlider = props => {
         // autoplaySpeed: 2000,
         autoplay: false,
     };
+
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0.5,
+    });
+
+    const sliderRef = useRef();
+
+    const tl = new TimelineLite();
+
+
+    const animation = () => {
+        setTimeout(() => {
+            tl.to(sliderRef.current, 0.4, { y: 0, autoAlpha: 1, opacity: 1 });
+        }, 300)
+    }
+
+    useEffect(() => {
+        TweenMax.set(sliderRef.current, { y: 150, autoAlpha: 0, opacity: 1 });
+    }, []);
+
+    useEffect(() => {
+        if (inView) {
+            animation();
+        }
+    }, [inView]);
+
     return (
-        <section className="section-slider">
+        <section className="section-slider" ref={sliderRef} style={{ opacity: 0 }}>
+            <span ref={ref} className="viewport"></span>
             <Container>
                 <Slider {...settings}>
 
                     {
                         _dataSlider.map((e, i) =>
-                            <SliderItem key={i} {...e} />
+                            <SlideTop timeDelay={200 * i}>
+                                <SliderItem key={i} {...e} />
+                            </SlideTop>
 
                         )
                     }

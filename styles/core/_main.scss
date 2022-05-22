@@ -14,8 +14,16 @@
   @include text("PoppinsRegular", #ffffff, 20px, 400, none, 31px);
 }
 .btn-main {
-  @include text("MontserratBold", #ffffff, 24px, 700, uppercase, 37px);
+  a {
+    @include text("MontserratBold", #ffffff, 24px, 700, uppercase, 37px);
+    text-decoration: none;
+  }
+  transition: all 0.3s ease;
+  &:hover {
+    background: linear-gradient(91.49deg, #bc078c -2.4%, #6b51d2 96.62%);
+  }
   background: linear-gradient(91.49deg, #0e76c1 -2.4%, #6b51d2 96.62%);
+
   border-radius: 17px;
   padding: 20px 50px;
   width: max-content;
@@ -527,6 +535,20 @@ section {
           border-radius: 12px;
           padding: 6px 40px 12px 40px;
           width: max-content;
+          cursor: pointer;
+          &:hover {
+            .div {
+              background: linear-gradient(
+                91.49deg,
+                #bc078c -10.4%,
+                #6b51d2 96.62%
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              text-fill-color: transparent;
+            }
+          }
           .div {
             position: relative;
             font-family: "MontserratBold";
