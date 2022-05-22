@@ -68,7 +68,7 @@ const CoreTeam = props => {
         arrows: false,
       });
     }
-    if (w > 1024) {
+    if (w > 1440) {
       setIsMobile(false);
       setSettings({
         dots: false,
@@ -80,7 +80,18 @@ const CoreTeam = props => {
         arrows: false,
       });
     }
-    if (w < 767) {
+    if (w <= 1024) {
+      setSettings({
+        dots: false,
+        infinite: true,
+        speed: 1500,
+        slidesToShow: 3,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+      });
+    }
+    if (w <= 820) {
       setSettings({
         dots: false,
         infinite: true,

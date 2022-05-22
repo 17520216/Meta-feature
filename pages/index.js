@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import { useEffect, useState } from 'react';
 import MasterPageExample from 'src/master/MasterPageExample';
 const Banner = dynamic(() => import("src/component/Banner"));
 const SectionSlider = dynamic(() => import("src/component/SectionSlider"));
@@ -10,6 +11,15 @@ const Partner = dynamic(() => import("src/component/Partner"));
 const CoreTeam = dynamic(() => import("src/component/CoreTeam"));
 const Advisor = dynamic(() => import("src/component/Advisor"));
 export default function Home() {
+
+  const [init, setInit] = useState(false);
+  useEffect(() => {
+    setInit(true);
+  }, [])
+
+
+  if (!init) return null;
+
   return (
     <MasterPageExample>
       <Banner />
