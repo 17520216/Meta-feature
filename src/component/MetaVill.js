@@ -50,7 +50,7 @@ const MetaVill = props => {
                         <h2 className="title">MetaVill</h2>
                         <p className="text">Metavill is a Social Entertainment Defi Platform. Users can easily generate NFTs then turn them into income by Shooting-to-earn feature.</p>
                         <div className="btn-meta">
-                            <a href="/" className="div">
+                            <a href="https://metavill.io" target="_blank" className="div">
                                 Explore more
                             </a>
                         </div>

@@ -113,7 +113,7 @@ const CoreTeam = props => {
   }, []);
 
   return (
-    <section className="core-team">
+    <section className="core-team" id="codeTeam">
       <h2 className="title">CORE TEAM</h2>
       <div className="wrap">
         <Slider {...settings}>

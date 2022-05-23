@@ -30,7 +30,7 @@ const Banner = () => {
                         <h2 className="title-main">META FUTURE GROUP (MFG)</h2>
                         <p className="text">Meta Future Group (MFG) focuses on creating and producing customized characters in the metaverse world to meet different user experiences across diverse means of entertainment media.</p>
                         <div className="btn-main">
-                            <a href="/">
+                            <a href="#">
                                 GET TO KNOW US
                             </a>
                         </div>

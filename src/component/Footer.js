@@ -6,7 +6,7 @@ import Container from 'src/component/Container'
 
 const Footer = props => {
     return (
-        <footer className="footer">
+        <footer className="footer" id="footer">
             <Container className="container-ft">
                 <div className="logo">
                     <a href="/"><img src={asset("/images/home/logo.png")} alt="" /></a>
@@ -25,32 +25,32 @@ const Footer = props => {
                     <div className="main-community">
                         <ul>
                             <li>
-                                <a href="/">
+                                <a href="https://www.facebook.com/Meta-Future-101240249191877/page/info/editing/?entry_point=comet&end_point=comet_left_nav_bar&interface=full_page" target="_blank">
                                     <FbICon />  Facebook
                                 </a>
                             </li>
                             <li>
-                                <a href="/">
+                                <a href="https://t.me/METAFutureVietnamCommunity" target="_blank">
                                     <TeleIcon />  Telegram
                                 </a>
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                <a href="/">
+                                <a href="https://twitter.com/METAFuture3" target="_blank">
                                     <TwitterIcon />  Twitter
                                 </a>
                             </li>
                             <li>
-                                <a href="/">
+                                <a href="https://www.linkedin.com/authwall?trk=qf&original_referer=https://www.linkedin.com/company/meta-future-group/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fmeta-future-group%2F%3Foriginal_referer%3D" target="_blank">
                                     <LinkInIcon />  LinkedIn
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </Container>
-        </footer>
+            </Container >
+        </footer >
     )
 }
 
