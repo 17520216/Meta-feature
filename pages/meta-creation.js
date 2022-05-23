@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import dynamic from 'next/dynamic';
 
 import MasterPageExample from 'src/master/MasterPageExample';
@@ -10,6 +11,12 @@ const _data = {
 }
 
 export default function metaCreation() {
+    const [init, setInit] = useState(false);
+    useEffect(() => {
+        setInit(true);
+    }, [])
+    if (!init) return null;
+
     return (
         <MasterPageExample pageName="MetaCreation">
             <ComingSoon {..._data} />

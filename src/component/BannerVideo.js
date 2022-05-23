@@ -120,7 +120,7 @@ export default function BannerVideo() {
               playing={play}
               loop
               className="react-player reactVideoPlayer"
-              url={"https://www.youtube.com/watch?v=PNmce5giGnA"}
+              url={asset("/images/home/intro.mp4")}
               controls={true}
               width="100%"
               height="100%"

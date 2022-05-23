@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import asset from '@/plugins/assets/asset'
 import Container from 'src/component/Container'
 import useScroll from '@/plugins/useScroll'
 import { useRouter } from 'next/router'
+import { TweenMax, TimelineLite, Power4, gsap } from "gsap";
 
 
 
@@ -12,12 +13,13 @@ const Header = props => {
     const [fixed, setFixed] = useState(false);
     const { scrollX, scrollY, scrollDirection } = useScroll();
 
+    const header = useRef();
+
     const router = useRouter();
 
     const [showMenu, setShowMenu] = useState(false);
 
 
-    const [init, setInit] = useState(false);
 
     useEffect(() => {
         if (scrollY && scrollY >= 100) {
@@ -27,9 +29,6 @@ const Header = props => {
         }
     }, [scrollY, scrollDirection]);
 
-    useEffect(() => {
-        setInit(true);
-    }, [])
 
     const clickMenu = () => {
         document.querySelector(".hamburger").classList.toggle("no-hamburger");
@@ -45,14 +44,20 @@ const Header = props => {
         document.querySelector(".hamburger").classList.toggle("no-hamburger");
     }
 
-    if (!init) return null;
+    useEffect(() => {
+        TweenMax.set(header.current, { opacity: 0, y: -50 });
+        setTimeout(() => {
+            TweenMax.to(header.current, 0.5, { opacity: 1, y: 0 });
+        }, 1000);
+    }, []);
+
 
     return (
         <header className={`header ${fixed ? "--fixed" : ""}`}>
             <div class="container-fluid">
                 <div className="logoMb"><a className={`logo ${fixed ? "--fixed" : ""}`} > <img src={asset("/images/home/logo.png")} alt="" /></a></div>
 
-                <ul className="header__menu">
+                <ul className="header__menu" ref={header}>
                     <li className="header__menu-item">
                         <a className={`${router.asPath === "/" ? "active" : ""}`} href="/">Home</a>
                     </li>

@@ -4,7 +4,7 @@
   @include text("MontserratExtraBold", #ffffff, 44px, 800, uppercase, 54px);
 }
 .title {
-  @include text("PoppinsBold", #ffffff, 30px, 700, uppercase, 45px);
+  @include text("PoppinsBold", #ffffff, 36px, 700, uppercase, 45px);
   transition: all 0.3s ease;
   &:hover {
     color: #bc078c;
@@ -15,7 +15,7 @@
 }
 .btn-main {
   a {
-    @include text("MontserratBold", #ffffff, 24px, 700, uppercase, 37px);
+    @include text("MontserratBold", #ffffff, 22px, 700, uppercase, 37px);
     text-decoration: none;
   }
   transition: all 0.3s ease;
@@ -25,7 +25,7 @@
   background: linear-gradient(91.49deg, #0e76c1 -2.4%, #6b51d2 96.62%);
 
   border-radius: 17px;
-  padding: 20px 50px;
+  padding: 12px 40px;
   width: max-content;
   cursor: pointer;
 }
@@ -51,13 +51,9 @@ section {
 .main {
   background-image: url(../../public/images/home/main-bg.jpg);
   background-size: 100% auto;
-  min-height: 100vh;
 }
 
 .banner {
-  min-height: 100vh;
-  /* fix issues bug viewport IOS */
-  min-height: -webkit-fill-available;
   position: relative;
   height: 100vh;
   background-image: url(../../public/images/home/bg-banner.jpg);
@@ -69,7 +65,7 @@ section {
     }
     .text {
       max-width: 550px;
-      margin: 38px 0;
+      margin: 30px 0;
     }
   }
   .img-banner {
@@ -265,6 +261,12 @@ section {
       }
       img {
         width: 100%;
+        @include transition($t);
+        cursor: pointer;
+        &:hover {
+          filter: brightness(1.4);
+          transform: scale(1.04);
+        }
       }
     }
   }
@@ -293,6 +295,14 @@ section {
       width: 25%;
       position: relative;
       z-index: 3;
+      @include transition($t);
+      cursor: pointer;
+      &:hover {
+        filter: brightness(1.5);
+        .description {
+          opacity: 1;
+        }
+      }
       .img {
         img {
           margin: auto;
@@ -307,6 +317,8 @@ section {
         @include text("PoppinsLight", #ffffff, 18px, 400, none, 30px);
         margin: auto;
         max-width: 200px;
+        @include transition($t);
+        opacity: 0.6;
         // font-family: "Poppins";
       }
     }
@@ -599,6 +611,9 @@ section {
             align-items: center;
             justify-content: center;
             height: 100%;
+            .anticon {
+              color: #a4117d;
+            }
           }
         }
         .banner-art {

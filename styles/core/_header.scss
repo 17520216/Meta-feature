@@ -73,24 +73,10 @@
           @include transition($t);
           color: #33fcff;
         }
-        &::before {
-          content: "";
-          @include position(absolute, null, 0, 0, auto);
-          @include size(0, 2px);
-          background-color: #33fcff;
-          @include transition($t $cubic);
-        }
-        &:hover::before,
-        &.active::before {
-          left: 0;
-          right: auto;
-          @include size(100%, 2px);
-          @include transition($t $cubic);
-        }
       }
       .logo {
         img {
-          width: 114px;
+          width: 90px;
           max-width: unset;
           @include transition($t $cubic);
         }

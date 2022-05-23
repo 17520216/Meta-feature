@@ -195,27 +195,32 @@
     padding: 40px 0;
   }
   .title-main {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
   }
   .title {
-    font-size: 14px;
+    font-size: 21px;
     line-height: 20px;
   }
   .text {
-    font-size: 8px;
+    font-size: 12px;
     line-height: 156.19%;
   }
   .btn-main {
-    font-size: 9.55738px;
-    line-height: 156.19%;
-    padding: 10px 8px 12px 8px;
+    padding: 10px 12px 6px 12px;
+    border-radius: 9px;
+    a {
+      font-size: 18px;
+      line-height: 16px;
+    }
   }
 
   .banner {
-    height: 56vh;
+    height: auto;
     .img-banner {
       width: 90%;
+      position: relative;
+      padding-top: 30px;
     }
     .wrap {
       padding-top: 60px;
@@ -228,6 +233,9 @@
     .top {
       width: 214px;
       height: 39px;
+      .title {
+        font-size: 15px;
+      }
     }
     .des {
       padding: 17px 0;
