@@ -47,7 +47,7 @@ const Header = props => {
     useEffect(() => {
         TweenMax.set(header.current, { opacity: 0, y: -50 });
         setTimeout(() => {
-            TweenMax.to(header.current, 0.5, { opacity: 1, y: 0 });
+            TweenMax.to(header.current, 0.5, { opacity: 1, y: 0, x: "-50%" });
         }, 1000);
     }, []);
 

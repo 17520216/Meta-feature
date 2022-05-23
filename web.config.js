@@ -66,7 +66,7 @@ const CONFIG = {
 	environment: process.env.NEXT_PUBLIC_ENV || "development",
 	site: {
 		title: "Meta feature",
-		description: "Description goes here",
+		description: "Meta feature",
 		type: "article",
 	},
 	links: {

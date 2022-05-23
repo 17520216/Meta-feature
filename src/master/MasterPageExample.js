@@ -31,7 +31,7 @@ function MasterPageExample({
 
         <link
           rel="shortcut icon"
-          href={`${CONFIG.getBasePath()}/favicon.png`}
+          href={asset("/favicon.png")}
         />
 
         <meta property="og:title" content={CONFIG.site.title} />
@@ -42,7 +42,7 @@ function MasterPageExample({
         />
         <meta
           property="og:image"
-          content={imageUrl || `${CONFIG.NEXT_PUBLIC_BASE_URL}/share.jpg`}
+          content={imageUrl || asset("/share.jpg")}
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
