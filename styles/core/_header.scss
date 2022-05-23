@@ -203,11 +203,10 @@
     }
     &.--fixed {
       --height-header: 40px;
-      padding: 30px 0 60px 0px;
+      padding: 35px 0 35px 0px;
       @include transition($t);
     }
     .container-fluid {
-      margin-top: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -218,7 +217,8 @@
     padding: 0;
     .logoMb {
       display: block;
-      width: 60px;
+      width: 47px;
+      margin-top: 6px;
       position: relative;
       z-index: 99;
       .logo {

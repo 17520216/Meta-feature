@@ -40,6 +40,10 @@ const Header = props => {
         setShowMenu(!showMenu)
     }
 
+    const clickMenuMobile = () => {
+        setShowMenu(false)
+        document.querySelector(".hamburger").classList.toggle("no-hamburger");
+    }
 
     if (!init) return null;
 
@@ -125,7 +129,7 @@ const Header = props => {
                     <div className="menu-overlay"></div>
                     <ul className="header__menu">
                         <li className="header__menu-item">
-                            <a className="active" href="/">Home</a>
+                            <a className={`${router.asPath === "/" ? "active" : ""}`} href="/">Home</a>
                         </li>
 
                         <li className="header__menu-item">
@@ -179,7 +183,7 @@ const Header = props => {
                             <span>Company</span>
                             <div className="sub-menu">
                                 <li className="sub">
-                                    <a href={`${router.asPath === "/" ? "#codeTeam" : "/#codeTeam"}`} onClick={() => setShowMenu(false)}>Core Team</a>
+                                    <a href={`${router.asPath === "/" ? "#codeTeam" : "/#codeTeam"}`} onClick={clickMenuMobile}>Core Team</a>
                                 </li>
                                 <li className="sub">
                                     <a href="https://metafuture-group.gitbook.io/metafuture/" target="blank">FAQ</a>
@@ -187,7 +191,7 @@ const Header = props => {
                             </div>
                         </li>
                         <li className="header__menu-item">
-                            <a href="#footer" onClick={() => setShowMenu(false)}>Contact</a>
+                            <a href="#footer" onClick={clickMenuMobile}>Contact</a>
                         </li>
                     </ul>
                 </div>
