@@ -113,7 +113,7 @@ const Header = props => {
                         </div>
                     </li>
                     <li className="header__menu-item">
-                        <a href="#footer" href={`${router.asPath === "/" ? "#codeTeam" : "/#codeTeam"}`}>Contact</a>
+                        <a href="#footer">Contact</a>
                     </li>
                 </ul>
                 <div className="hamburger" onClick={clickMenu}>
