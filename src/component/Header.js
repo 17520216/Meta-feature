@@ -99,7 +99,7 @@ const Header = props => {
                     </li>
                     <li className="header__menu-item"><a className={`logo ${fixed ? "--fixed" : ""}`} > <img src={asset("/images/home/logo.png")} alt="" /></a></li>
                     <li className="header__menu-item">
-                        <span>Document</span>
+                        <span>Meta Future</span>
                         <div className="sub-menu">
                             <li className="sub">
                                 <a href="https://drive.google.com/file/d/18eXuhvWyiIW3JYAsx3jFwAUzk49s95LE/view" target="_blank">Pitch deck</a>
@@ -107,17 +107,40 @@ const Header = props => {
                             <li className="sub">
                                 <a href="https://drive.google.com/file/d/1jFy3mE1FqyH9tkFFgGWlX-XUu5kf7g9g/view" target="_blank">Proposal</a>
                             </li>
+                            <li className="sub">
+                                <a href="#">Whitepaper</a>
+                            </li>
                         </div>
                     </li>
 
                     <li className="header__menu-item">
-                        <span>Company</span>
-                        <div className="sub-menu">
+                        <span>Community</span>
+                        {/* <div className="sub-menu">
                             <li className="sub">
                                 <a href={`${router.asPath === "/" ? "#codeTeam" : "/#codeTeam"}`}>Core Team</a>
                             </li>
                             <li className="sub">
                                 <a href="https://metafuture-group.gitbook.io/metafuture/" target="blank">FAQ</a>
+                            </li>
+                        </div> */}
+                        <div className="sub-menu">
+                            <li className="sub">
+                                <a target="_blank" href="https://t.me/METAFutureVietnamCommunity">Telegram</a>
+                            </li>
+                            <li className="sub">
+                                <a target="_blank" href="https://www.facebook.com/metafuture.group">Facebook</a>
+                            </li>
+                            <li className="sub">
+                                <a target="_blank" href="https://www.facebook.com/metafuture.group">Twitter</a>
+                            </li>
+                            <li className="sub">
+                                <a target="_blank" href="https://www.linkedin.com/company/meta-future-group-metaverse/">Linkedin</a>
+                            </li>
+                            <li className="sub">
+                                <a target="_blank" href="https://medium.com/@metafuture.group">Medium</a>
+                            </li>
+                            <li className="sub">
+                                <a target="_blank" href="https://discord.gg/xPyUmrYDsB">Discord</a>
                             </li>
                         </div>
                     </li>
@@ -173,7 +196,7 @@ const Header = props => {
                             </div>
                         </li>
                         <li className="header__menu-item">
-                            <span>Document</span>
+                            <span>Meta Future</span>
                             <div className="sub-menu">
                                 <li className="sub">
                                     <a href="https://drive.google.com/file/d/18eXuhvWyiIW3JYAsx3jFwAUzk49s95LE/view" target="_blank">Pitch deck</a>
@@ -181,17 +204,40 @@ const Header = props => {
                                 <li className="sub">
                                     <a href="https://drive.google.com/file/d/1jFy3mE1FqyH9tkFFgGWlX-XUu5kf7g9g/view" target="_blank">Proposal</a>
                                 </li>
+                                <li className="sub">
+                                    <a href="#">Whitepaper</a>
+                                </li>
                             </div>
                         </li>
 
                         <li className="header__menu-item">
-                            <span>Company</span>
-                            <div className="sub-menu">
+                            <span>Community</span>
+                            {/* <div className="sub-menu">
                                 <li className="sub">
                                     <a href={`${router.asPath === "/" ? "#codeTeam" : "/#codeTeam"}`} onClick={clickMenuMobile}>Core Team</a>
                                 </li>
                                 <li className="sub">
                                     <a href="https://metafuture-group.gitbook.io/metafuture/" target="blank">FAQ</a>
+                                </li>
+                            </div> */}
+                            <div className="sub-menu">
+                                <li className="sub">
+                                    <a target="_blank" href="https://t.me/METAFutureVietnamCommunity">Telegram</a>
+                                </li>
+                                <li className="sub">
+                                    <a target="_blank" href="https://www.facebook.com/metafuture.group">Facebook</a>
+                                </li>
+                                <li className="sub">
+                                    <a target="_blank" href="https://www.facebook.com/metafuture.group">Twitter</a>
+                                </li>
+                                <li className="sub">
+                                    <a target="_blank" href="https://www.linkedin.com/company/meta-future-group-metaverse/">Linkedin</a>
+                                </li>
+                                <li className="sub">
+                                    <a target="_blank" href="https://medium.com/@metafuture.group">Medium</a>
+                                </li>
+                                <li className="sub">
+                                    <a target="_blank" href="https://discord.gg/xPyUmrYDsB">Discord</a>
                                 </li>
                             </div>
                         </li>

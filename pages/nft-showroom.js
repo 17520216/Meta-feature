@@ -7,6 +7,7 @@ const ComingSoon = dynamic(() => import("src/component/ComingSoon"));
 const _data = {
     img: "/images/home/showroom.png",
     title: "NFT Showroom",
+    isMeta: false,
     des: `Exhibit NFTs through their favorite characters in an immersive, decentralized environment, so that relish the real-time experience on a wide range of entertainment products. This will become the foundation for amazing features and systems in no distant future.`
 }
 

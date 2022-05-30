@@ -7,6 +7,7 @@ const ComingSoon = dynamic(() => import("src/component/ComingSoon"));
 const _data = {
     img: "/images/home/nft-storage.png",
     title: "NFT Storage",
+    isMeta: false,
     des: `A place to store and exchange NFT items for all members participating in MFG. MFG is available for everyone with no restriction at all so that anyone can access these inexhaustible resources.`
 }
 

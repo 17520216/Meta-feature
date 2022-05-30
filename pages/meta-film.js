@@ -6,7 +6,7 @@ const ComingSoon = dynamic(() => import("src/component/ComingSoon"));
 
 const _data = {
     img: "/images/home/banner-meta-film.png",
-    title: "MetaFilm",
+    name: "MetaFilm",
     des: `MetaFilm is the revolution that transform the ordinary to the extraordinary, bringing the benefit-focused diversity when experiencing in the art in every movie scene. Users can collect, gather all the valuable NFTs in exchange for greater incentives, and the privilege of "Enjoy- to - Earn" eventually.`
 }
 

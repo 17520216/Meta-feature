@@ -120,6 +120,13 @@
       }
     }
   }
+  .btn-meta {
+    margin-top: 10px;
+    padding: 4px 20px 7px 18px;
+    .div {
+      font-size: 12px;
+    }
+  }
   .meta-vill {
     height: auto;
     .content-meta {
@@ -130,13 +137,6 @@
         .left {
           width: 100%;
           margin-bottom: 20px;
-          .btn-meta {
-            margin-top: 10px;
-            padding: 4px 20px 7px 18px;
-            .div {
-              font-size: 12px;
-            }
-          }
         }
         .right {
           width: 100%;

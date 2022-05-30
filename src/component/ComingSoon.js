@@ -6,8 +6,10 @@ import { TweenMax, Elastic, TimelineLite, gsap } from "gsap";
 
 const ComingSoon = ({
     className = "",
+    name = "COMING SOON",
     img = "/images/home/banner-meta-film.png",
     title = "MetaFilm",
+    isMeta = "true",
     des = `MetaFilm is the revolution that transform the ordinary to the extraordinary, bringing the benefit-focused diversity when experiencing in the art in every movie scene. Users can collect, gather all the valuable NFTs in exchange for greater incentives, and the privilege of "Enjoy- to - Earn" eventually.`
 }) => {
     const textRef = useRef();
@@ -33,8 +35,13 @@ const ComingSoon = ({
         <div className={`section-banner ${className ? className : ""}`}>
             <Container className="content-coming">
                 <div className="left" ref={textRef} style={{ opacity: 0 }}>
-                    <h2>COMING SOON</h2>
-                    <h4>{title}</h4>
+                    <h2>{name}</h2>
+                    {isMeta ?
+                        <div className="btn-meta">
+                            <div className="div">
+                                Explore more
+                            </div>
+                        </div> : <h4>{title}</h4>}
                     <div className="banner-text">{des}</div>
                 </div>
                 <div className="right">
