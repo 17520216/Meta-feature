@@ -12,6 +12,7 @@
     "@ant-design/icons": "^4.7.0",
     "cors": "^2.8.5",
     "gsap": "^3.10.4",
+    "locomotive-scroll": "^4.1.4",
     "next": "12.1.6",
     "next-seo": "^5.4.0",
     "node-sass": "^7.0.1",
