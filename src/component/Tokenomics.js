@@ -49,6 +49,7 @@ const Tokenomics = props => {
             animationOn();
         }
     }, [inView]);
+
     return (
         <section className="tokenomics">
             <Container className="contain-token">
@@ -57,11 +58,52 @@ const Tokenomics = props => {
                 <div className="wrap" ref={listRef}>
                     <div className="item left" style={{ opacity: 0 }}>
                         <p>Token</p>
+                        <div className="token-box">
+                            <div className="item-box item1">
+                                <span>Seed</span><span className="bold">5%</span>
+                            </div>
+                            <div className="item-box item2">
+                                <span>Private</span><span className="bold">12%</span>
+                            </div>
+                            <div className="item-box item3">
+                                <span>IDO</span><span className="bold">2%</span>
+                            </div>
+                        </div>
+
                         <img srcSet={asset("/images/home/token-left.png 2x")} alt="" />
                     </div>
                     <div className="item right" style={{ opacity: 0 }}>
                         <p>Fund</p>
-                        <img srcSet={asset("/images/home/token-right.png 2x")} alt="" />
+                        <div className="token-box">
+                            <div className="item-box item1">
+                                <span className="bold">15%</span><span>Core Team</span>
+                            </div>
+                            <div className="item-box item2">
+                                <span className="bold">15%</span><span>Marketing</span>
+                            </div>
+                            <div className="item-box item3">
+                                <span className="bold">10%</span><span>Development Fund</span>
+                            </div>
+                            <div className="item-box item4">
+                                <span className="bold">10%</span><span>KOLs Reward</span>
+                            </div>
+                            <div className="item-box item5">
+                                <span className="bold">10%</span><span>Liquidity</span>
+                            </div>
+                            <div className="item-box item6">
+                                <span className="bold">8%</span><span>Staking Reward</span>
+                            </div>
+                            <div className="item-box item7">
+                                <span className="bold">7%</span><span>Owner Partner</span>
+                            </div>
+                            <div className="item-box item8">
+                                <span className="bold">3%</span><span>Farming Reward</span>
+                            </div>
+                            <div className="item-box item9">
+                                <span className="bold">3%</span><span>Advisor</span>
+                            </div>
+                        </div>
+                        {/* <img srcSet={asset("/images/home/token-right.png 2x")} alt="" /> */}
                     </div>
                 </div>
             </Container>

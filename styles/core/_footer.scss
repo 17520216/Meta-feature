@@ -36,11 +36,14 @@
         padding: 10px 16px;
         border: 1.69543px solid #b92192;
       }
+      a.dis {
+        padding-right: 16px;
+      }
       a {
         @include text("PoppinsLight", #ffffff, 18px, 400, none, 27px);
         text-decoration: none;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         // font-family: "Poppins";
         cursor: pointer;

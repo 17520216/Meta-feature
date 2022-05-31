@@ -105,10 +105,10 @@ const Header = props => {
                                 <a href="https://drive.google.com/file/d/18eXuhvWyiIW3JYAsx3jFwAUzk49s95LE/view" target="_blank">Pitch deck</a>
                             </li>
                             <li className="sub">
-                                <a href="https://drive.google.com/file/d/1jFy3mE1FqyH9tkFFgGWlX-XUu5kf7g9g/view" target="_blank">Proposal</a>
+                                <a href="https://drive.google.com/file/d/1jFy3mE1FqyH9tkFFgGWlX-XUu5kf7g9g/view" target="_blank">KOL proposal</a>
                             </li>
                             <li className="sub">
-                                <a href="#">Whitepaper</a>
+                                <a href="https://metafuture-group.gitbook.io/metafuture/" target="_blank">White paper</a>
                             </li>
                         </div>
                     </li>
@@ -202,10 +202,10 @@ const Header = props => {
                                     <a href="https://drive.google.com/file/d/18eXuhvWyiIW3JYAsx3jFwAUzk49s95LE/view" target="_blank">Pitch deck</a>
                                 </li>
                                 <li className="sub">
-                                    <a href="https://drive.google.com/file/d/1jFy3mE1FqyH9tkFFgGWlX-XUu5kf7g9g/view" target="_blank">Proposal</a>
+                                    <a href="https://drive.google.com/file/d/1jFy3mE1FqyH9tkFFgGWlX-XUu5kf7g9g/view" target="_blank">KOL proposal</a>
                                 </li>
                                 <li className="sub">
-                                    <a href="#">Whitepaper</a>
+                                    <a href="https://metafuture-group.gitbook.io/metafuture/" target="_blank">White paper</a>
                                 </li>
                             </div>
                         </li>

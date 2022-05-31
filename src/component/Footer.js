@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { DiscordIcon, FbICon, LinkInIcon, TeleIcon, TwitterIcon } from 'src/component/Icon'
+import { DiscordIcon, FbICon, LinkInIcon, TeleIcon, TwitterIcon, MediumIcon } from 'src/component/Icon'
 import asset from '@/plugins/assets/asset'
 import Container from 'src/component/Container'
 
@@ -35,8 +35,8 @@ const Footer = props => {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://discord.gg/xPyUmrYDsB" target="_blank">
-                                    Discord
+                                <a className="dis" href="https://discord.gg/xPyUmrYDsB" target="_blank">
+                                    <DiscordIcon />  Discord
                                 </a>
                             </li>
 
@@ -54,7 +54,7 @@ const Footer = props => {
                             </li>
                             <li>
                                 <a href="https://medium.com/@metafuture.group" target="_blank">
-                                    Medium
+                                    <MediumIcon /> Medium
                                 </a>
                             </li>
                         </ul>

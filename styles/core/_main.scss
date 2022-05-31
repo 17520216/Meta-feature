@@ -246,6 +246,60 @@ section {
 /* <-------  Style Tokenomics  -------> */
 
 .tokenomics {
+  .token-box {
+    .item-box {
+      padding: 25px 14px 25px 40px;
+      color: #fff;
+      background-image: url(../../public/images/home/bg-box-1.png);
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: auto;
+      @include transition($t);
+      cursor: pointer;
+      opacity: 0.8;
+      &:hover {
+        filter: brightness(1.6);
+        opacity: 1;
+        transform: scale(1.04);
+      }
+      .bold {
+        font-family: "PoppinsExtraBold";
+      }
+      &.item2 {
+        background-image: url(../../public/images/home/bg-box-2.png);
+      }
+      &.item3 {
+        background-image: url(../../public/images/home/bg-box-3.png);
+        width: calc((100% * 2) / 3);
+      }
+      &.item4 {
+        background-image: url(../../public/images/home/bg-box-4.png);
+        width: calc((100% * 2) / 3);
+      }
+      &.item5 {
+        background-image: url(../../public/images/home/bg-box-5.png);
+        width: calc((100% * 2) / 3);
+      }
+      &.item6 {
+        background-image: url(../../public/images/home/bg-box-6.png);
+        width: calc((100% / 15) * 10);
+      }
+      &.item7 {
+        background-image: url(../../public/images/home/bg-box-7.png);
+        width: calc((100% / 15) * 9);
+      }
+      &.item8 {
+        background-image: url(../../public/images/home/bg-box-8.png);
+        width: calc((100% / 15) * 7);
+      }
+      &.item9 {
+        background-image: url(../../public/images/home/bg-box-9.png);
+        width: calc((100% / 15) * 7);
+      }
+    }
+  }
   .title {
     text-align: center;
     padding-bottom: 60px;
@@ -256,6 +310,28 @@ section {
     gap: 40px;
     .item {
       width: 46%;
+      &.left {
+        .token-box {
+          margin-bottom: 80px;
+          .item-box {
+            margin-right: auto;
+            margin-left: 0;
+            padding: 25px 40px 25px 14px;
+            &.item1 {
+              background-image: url(../../public/images/home/bg-box-l1.png);
+              width: calc((100% / 12) * 5);
+            }
+            &.item2 {
+              background-image: url(../../public/images/home/bg-box-l2.png);
+              width: 100%;
+            }
+            &.item3 {
+              background-image: url(../../public/images/home/bg-box-l3.png);
+              width: calc((100% / 12) * 3);
+            }
+          }
+        }
+      }
       p {
         @include text("PoppinsMedium", #ffffff, 26px, 600, none, 39px);
         text-align: center;
@@ -263,12 +339,6 @@ section {
       }
       img {
         width: 100%;
-        @include transition($t);
-        cursor: pointer;
-        &:hover {
-          filter: brightness(1.4);
-          transform: scale(1.04);
-        }
       }
     }
   }
