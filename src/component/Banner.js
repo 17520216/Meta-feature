@@ -76,10 +76,6 @@ const Banner = () => {
                         },
                         interactivity: {
                             events: {
-                                onClick: {
-                                    enable: true,
-                                    mode: "push"
-                                },
                                 onHover: {
                                     enable: true,
                                     mode: "repulse"
@@ -129,7 +125,7 @@ const Banner = () => {
                                     enable: true,
                                     value_area: 800
                                 },
-                                value: 80
+                                value: 60
                             },
                             opacity: {
                                 value: 0.5
