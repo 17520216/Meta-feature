@@ -439,6 +439,13 @@
       }
       .left {
         margin-bottom: 16px;
+        &.small {
+          h2 {
+            font-size: 40px;
+            line-height: 47px;
+            white-space: break-spaces;
+          }
+        }
       }
     }
   }

@@ -518,6 +518,7 @@ section {
       &.small {
         h2 {
           font-size: 58px;
+          white-space: nowrap;
         }
       }
       h2 {
@@ -530,7 +531,6 @@ section {
           uppercase,
           119px
         );
-        white-space: nowrap;
         background: linear-gradient(180deg, #cf129b 0%, #4f7fcc 159.32%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
