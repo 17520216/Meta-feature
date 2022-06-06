@@ -25,7 +25,7 @@ const _data = [
   },
   {
     name: "PHU TRAN",
-    title: "Head of Marketing",
+    title: "CPO",
     des: "Founder of Design Real production company with many experiences in marketing field such as: QC Leader Gameloft, Marketing Director VNG, Financial Advisor Mekong Capital...",
     img: "/images/home/PHUTRAN.png",
   },

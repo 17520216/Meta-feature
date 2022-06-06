@@ -90,7 +90,7 @@ const Header = props => {
                                 <a href="/meta-wallet">MetaWallet</a>
                             </li>
                             <li className="sub">
-                                <a href="/meta-launpad">MetaLaunpad</a>
+                                <a href="/meta-launpad">MetaLaunchpad</a>
                             </li>
                             <li className="sub">
                                 <a href="/meta-creation">MetaCreation</a>
@@ -188,7 +188,7 @@ const Header = props => {
                                     <a href="meta-wallet">MetaWallet</a>
                                 </li>
                                 <li className="sub">
-                                    <a href="meta-launpad">MetaLaunpad</a>
+                                    <a href="meta-launpad">MetaLaunchpad</a>
                                 </li>
                                 <li className="sub">
                                     <a href="meta-creation">MetaCreation</a>

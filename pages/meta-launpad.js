@@ -6,7 +6,7 @@ const ComingSoon = dynamic(() => import("src/component/ComingSoon"));
 
 const _data = {
     img: "/images/home/banner-meta-launpad.png",
-    name: "Meta Launpad",
+    name: "Meta Launchpad",
     des: `Meta Launchpad is also known as “token launchpad for Blockchain projects”. Thanks to it, many projects can easily connect with extensive ecosystems from the world’s leading cryptocurrency exchanges.`
 }
 
@@ -19,7 +19,7 @@ export default function metaLaunch() {
 
     return (
         <MasterPageExample pageName="MetaLaunch">
-            <ComingSoon {..._data} />
+            <ComingSoon isSmall={true} {..._data} />
         </MasterPageExample>
     )
 }

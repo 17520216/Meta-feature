@@ -515,6 +515,11 @@ section {
     .left {
       width: 50%;
       margin-bottom: 70px;
+      &.small {
+        h2 {
+          font-size: 58px;
+        }
+      }
       h2 {
         // @include text("Montserrat", #ffffff, 98px, 800, uppercase, 119px);
         @include text(
@@ -525,6 +530,7 @@ section {
           uppercase,
           119px
         );
+        white-space: nowrap;
         background: linear-gradient(180deg, #cf129b 0%, #4f7fcc 159.32%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
