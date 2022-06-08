@@ -117,13 +117,13 @@ const Banner = () => {
                                 enable: true,
                                 outMode: "bounce",
                                 random: false,
-                                speed: 6,
+                                speed: 3,
                                 straight: false
                             },
                             number: {
                                 density: {
                                     enable: true,
-                                    value_area: 800
+                                    value_area: 1500
                                 },
                                 value: 60
                             },
@@ -135,7 +135,7 @@ const Banner = () => {
                             },
                             size: {
                                 random: true,
-                                value: 5
+                                value: 2
                             }
                         }
                     }}

@@ -42,12 +42,12 @@ const _data = [
     des: "An experienced Full-Stack developer. Solid hands-on experience development for many projects, from small to large, from Website to Mobile App. Famous game project: Real football, Assassin’s Creed…",
     img: "/images/home/KIENPHAN.png",
   },
-  {
-    name: "HOANG LE",
-    title: "CMO",
-    des: "Hoang Le has experience in implementing many projects in the field of Digital project manager, Ecommerce manager….",
-    img: "/images/home/HOANGLE.png",
-  },
+  // {
+  //   name: "HOANG LE",
+  //   title: "CMO",
+  //   des: "Hoang Le has experience in implementing many projects in the field of Digital project manager, Ecommerce manager….",
+  //   img: "/images/home/HOANGLE.png",
+  // },
 ]
 
 const CoreTeam = props => {
